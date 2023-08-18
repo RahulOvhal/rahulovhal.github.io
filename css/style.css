@@ -1,0 +1,2224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+
+@import '@ionic/vue/css/core.css';
+
+/* Google fonts for Website name  */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/* -------------------------Universal Styling ------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+    --heading: rgb(0 10 90);
+    --para: #0a0a1b;
+    --para-tint: #e4e4e4;
+    --white: #fff;
+    --links: gold;
+    --helper: #8490ff;
+    --helper-bg: #adb3e6;    
+    --btn: #0653f9;
+    --overlay: #3e64ff;
+    --icons-bg: rgba(144, 172, 209, 0.2);
+    --helper-tint: #f3f4ff;
+    --nav-bg: rgb(39, 60, 219);
+    --bg: rgb(249 249 255);
+    --gradient: linear-gradient(0deg, rgb(132 144 255)25%, rgb(98 189 252)100%);
+    --gradientSupport: linear-gradient(to right,rgb(37, 169, 240)0%, rgb(56, 56, 245)100% );
+    --shadow: 0px 5px 10px 0px rgba(114, 114, 119, 0.887);
+    --greet: #1654da;
+
+    --dark-mood:#212121;
+    --light-mood: #edf2fc;
+}
+html{
+    font-family: 62.5%;
+    /* (62.5/100)*16 = 10px */
+    /* 1 rem = 10px */
+    /* font-family: 10px; */
+    overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+ /* ============================================== WebSite Scroll-Bar Section =================================================  */
+
+ ::-webkit-scrollbar{
+  width: 15px;
+
+ }
+
+ ::-webkit-scrollbar-track{
+  background-color: var(--bg);
+ }
+
+ ::-webkit-scrollbar-thumb{
+  background-image: var(--gradientSupport);
+  height: 100px;
+  border-radius: 2px;
+ }
+
+
+ /* ============================================== Reusable code for Header Section =================================================  */
+
+h1,h2,h3,h4{
+   font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: var(--heading);
+    font-size: 3rem;
+    font-weight: 500;
+}
+h3{
+    font-size: 1.2rem; 
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+p{
+    /* color: var(--para); */
+    color: var(--para);
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* ============================================== Preloader Section Start =================================================  */
+
+/* #preloader{
+  background: #130c23 url(../images/loader.gif) no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+} */
+ /* ============================================== Header Section Start =================================================  */
+
+.header{
+    padding: 0 2.8rem;
+    height: 3.2rem;
+    width: 100%;
+    background-image: var(--gradient);
+    /* background: transparent; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* position: relative;
+    overflow: hidden;    */
+}
+#header-page{
+  position: fixed;
+  z-index: 999;
+}
+
+.header .logo{
+  width: 12%;
+}
+
+/* .logo span{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color:var(--heading);
+  font-weight: 600;
+
+} */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ======== Toggel Button Start========== */
+.toggel{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.toggel-icon{
+  width: 1rem;
+  height: 1rem;
+}
+/* .toggel-icon[name="sunny"]{
+  display: none;
+  color: #c8ff00;
+} */
+/* .active-toggel .toggel-icon[name="sunny"]{
+  display: block;
+ }
+ .active-toggel .toggel-icon[name="moon"]{
+  display: none;
+ } */
+ /* .dark-mood{
+  background-color: #0653f9;
+ } */
+.navbar-list{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited
+{
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--white );
+    transition: color 0.3s linear;
+}
+
+.navbar-link:active,
+.navbar-link:hover{
+    color: var(--para);
+}
+nav ul li a .active{
+  color: var(--para);
+}
+.mobile-navbar-btn{
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.ion-icon {
+  width: 30px;
+  height: 30px;
+  
+}
+.ion-icon[name="close-outline"]{
+  display: none;
+}
+ /* ============================================== Reusable code for Main Hero Section =================================================  */
+.comma{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.section{
+    margin-top: 3rem;
+    padding: 3rem 0;
+    background-color:var(--bg);
+}
+
+.container{
+  max-width: 100rem;
+  margin: 0 7rem;
+  /* background-color: green; */
+  
+}
+
+.grid{
+    display: grid;
+    gap: 3rem;
+}
+
+.grid-two-column{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.grid-three-column{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column{
+     display: grid;  
+    grid-template-columns: repeat(4, 1fr);  
+}
+
+.btn{
+  
+    background-image: var(--gradientSupport);
+    padding: 0.6rem 0.8rem;
+    border: none;
+    color: var(--helper-tint);
+    font-weight: 800;
+    text-transform: capitalize;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .btn:active{
+    box-shadow: var(--shadow);
+}
+
+ /* ============================================== Main Hero Section Start =================================================  */
+
+ 
+.section-hero{
+  
+    display: grid;
+    place-items: center;
+   
+  }
+
+
+
+.section-hero-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 3rem 0;
+    padding: 0 2rem ;
+}
+.greet{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--greet);
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+}
+
+/* .greet span{
+width: 90%;
+height: 2rem;
+background-color: var(--heading);
+} */
+
+.hero-top-data{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+
+.hero-heading{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3rem;
+   
+    
+}
+/* .hero-heading span{
+  text-transform: capitalize;
+  color: #3164d1;
+} */
+.profession{
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--greet);
+  text-transform: none;
+}
+.profession span{
+  font-size: 1.2rem;
+  text-transform: none;
+  /* color: #0a0a1b; */
+  color: #0e0e52;
+  font-weight: 600;
+}
+/* .profession span{
+  background-color: var(--gradientSupport);
+} */
+.hero-pera{
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 80rem;
+}
+
+.section-hero-image{
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+    padding-left: 15%;
+}
+
+
+.hero-image{
+    max-width: 90%;
+    max-height: 25rem;
+    
+    /* border-radius: 10%; */
+    box-shadow: 0.8rem 0.5rem var(--helper);
+    cursor: pointer;
+}
+/* .hero-image:hover{
+    transform: scale();
+} */
+
+ /* ============================================== Reusable-Code for Bio-Data Section  =================================================  */
+
+ .project-heading{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+ }
+ .common-heading{
+    color: var(--heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+ }
+ /* ============================================== Bio-Data Section Start =================================================  */
+.section-biodata{
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
+   
+    background-attachment: fixed;
+}
+
+ .bio-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    /* padding-left: 4rem;  */
+}
+
+.bio-data-info{
+    max-height: 8rem;
+    /* margin-bottom: 1rem; */
+}
+.bio-data-stats{
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.bio-stats h3{
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.bio-progress-bar
+{
+    width: 90%;
+    height: 0.3rem;
+    background-color: var(--para-tint);
+    border-radius: 10rem;
+    position: relative;
+    
+}
+
+.bio-progress-bar::before{
+    content: "";
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+    height: inherit;
+    background-image: var(--gradientSupport);
+    border-radius: 10rem;
+}
+.bio-progress-2::before{
+    width: 85%;
+}
+.bio-progress-3::before{
+    width: 90%;
+}
+.bio-progress-4::before{
+    width: 85%;
+}
+.bio-progress-5::before{
+    width: 80%;
+}
+.bio-progress-6::before{
+    width: 80%;
+    
+}
+
+.bio-progress-bar span{
+    position: absolute;
+    top: 0.7rem;
+    width: 2rem;
+    height: 1rem;
+    color: var(--white);
+    font-size: 0.8rem;
+    background-image: var(--gradientSupport);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: 0;
+    border-radius: 50%;
+   
+}
+.bio-progress-bar span{
+    left: 90%;
+}
+.bio-progress-2 span{
+    left: 80%;
+}
+.bio-progress-3 span{
+    left: 85%;
+}
+.bio-progress-4 span{
+    left: 80%;
+}
+.bio-progress-5 span{
+    left: 75%;
+}
+.bio-progress-6 span{
+    left: 75%;
+}
+
+/* creating Upper-Arrow */
+
+.bio-progress-bar span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.4rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -0.7rem;
+}
+
+
+/*=================== Bio-data Image section ===================  */
+ .bio-image{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bio-image img{
+    width: 80%;
+    /* border-radius: 10%; */
+    box-shadow: 0.8rem 0.5rem var(--helper);
+    display: inline-block;
+}
+
+ 
+
+ /* ============================================== Projects Section Start =================================================  */
+
+.section-projects{
+    /* background-color: var(--bg); */
+   
+    transition: all o.5s linear;
+    /* padding: 0 2rem; */
+}
+
+.section-projects p{
+    max-width: 40rem;
+    /* margin-bottom: 2rem; ; */
+}
+
+.p-btns{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2.5rem auto;
+}
+
+.p-btns .btn{
+  /* width: 10rem; */
+  padding: 0.6rem 1.5rem;
+}
+.projects-images img{
+    width: 100%;
+    height: 11rem;
+    gap: 2rem;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay{
+    position: relative;
+    overflow: hidden;
+  
+}
+/* .image-overlay img{
+  width: 30rem;
+  height: 20rem;
+} */
+
+.image-overlay .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    background-color: var(--helper);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 7px;
+    opacity: 0;
+    
+}
+
+.image-overlay:hover > .overlay{
+    transform: translateY(0);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.image-overlay .common-heading{
+    margin: 0;
+    color: var(--white);
+}
+
+.p-btn-active{
+    transform: translateY(-0.5rem);
+}
+.p-image-not-active{
+    display: none;
+}
+
+
+/* ============================================== Services Section Start ================================================= */
+
+.section-services{
+  /* background-color: #adb3e6; */
+    transition: all 0.7s linear;
+}
+
+.section-services p{
+    max-width: 40rem;
+}
+
+.section-services .grid{
+    margin-top: 1rem;
+    row-gap: 10rem;
+}
+
+.service-box{
+    text-align: center;
+    padding: 1.5rem 1.8rem;
+    margin-top: 1.5rem;
+    box-shadow: var(--dark-mood);
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: 1px solid var(--dark-mood);
+}
+.service-box p{
+  font-size: 1rem;
+}
+
+.service-box:hover,
+.service-box:active{
+    /* color: var(--white); */
+    transform: translateY(-2rem);
+    /* border: none;   */
+    /* background-color: var(--helper-bg); */
+}
+
+
+.service-icon {
+    
+    width: 5rem;
+    height: 5rem;
+    background: var(--icons-bg);
+    display: inline-block;
+    border-radius: 15% 85% 10% 90% / 88% 16% 84% 12%   ;
+    padding: 0.8rem ;
+    position: relative;
+    color: var(--btn);
+    animation: water-wave 5s linear infinite;
+}
+
+@keyframes water-wave {
+     0%{
+       border-radius: 34% 66% 26% 74% / 69% 25% 75% 31% ;
+       /* border-radius: 23% 77% 34% 66% / 41% 27% 73% 59% ; */
+       border: 1px solid #0653f9;
+       
+     }
+
+     25%{
+        border-radius: 55% 45% 53% 47% / 48% 57% 43% 52% ;
+        /* border-radius: 49% 51% 53% 47% / 37% 54% 46% 63%  ; */
+        border: 1px solid #0653f9;
+     }
+
+     50%{
+        border-radius: 86% 14% 84% 16% / 15% 87% 13% 85% ;
+        /* border-radius: 49% 51% 53% 47% / 37% 54% 46% 63%  ; */
+        border: 1px solid #0653f9;
+     }
+
+     100%{
+        border-radius: 15% 85% 10% 90% / 88% 16% 84% 12%  ;
+        border: 1px solid #0653f9;  
+     }
+}
+
+.service-box h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    /* text-transform: uppercase; */
+}
+
+/* ============================================== Happy Clients Section Start ================================================= */
+.section-Happy-clients{
+
+  display: none;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+  }
+
+  /* .swiper-wrapper{
+    max-width:100%;
+  } */
+  .mySwiper .container{
+    max-width: 110rem;
+    margin: 0 7rem;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-client-msg p{
+    color: #0a0a1b;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-break: break-all;
+  }
+  .swiper-client-msg{
+    padding: 1rem 3rem;
+    /* padding-left: 3rem; */
+    background-color: var(--white);
+    border-radius: 1rem;
+    text-align: left;
+    box-shadow: var(--shadow);
+    position: relative;
+    
+  }
+  
+  .swiper-client-msg::before{
+    content: "";
+    position: absolute;
+    bottom: -7.8rem;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    border: 4rem solid white;
+    border-color: transparent;
+    border-top-color: var(--helper-tint);
+
+  }
+  .swiper-client-msg p::before{
+    content: "\f10d";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: #ced3ff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: "font awesome 6 free";
+  }
+
+  .swiper-client-msg p::after{
+    content: "\f10e";
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    color: #ced3ff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: "font awesome 6 free";
+  }
+
+  .swiper-client-profile{
+    margin-top: 2.5rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .swiper-slide img {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 5rem solid var(--shadow);
+    background: transparent; */
+  }
+  .profile-name{
+    text-transform: capitalize;
+    color: var(--greet);
+    
+  }
+
+  /* ============================================== Freelancing Section Start =================================================  */
+
+  .section-freelancing{
+    position: relative;
+    background-image: url(../images/p7-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+    transition: all 0.7s linear;
+  }
+
+  .section-freelancing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    opacity: 0.6;
+  }
+
+  .section-freelancing .container{
+    position: relative;
+  }
+
+  .section-freelancing h2{
+    font-size: 2.2rem;
+    /* text-transform: capitalize; */
+  }
+
+  .section-freelancing span{
+    color: #c8ff00;
+  }
+
+  .section-freelancing h4{
+    font-size: 1.2rem;
+  }
+
+  .section-freelancing h2,h4{
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  /* ============================================== Contact-US Section Start =================================================  */
+
+  .section-contact{
+    /* max-width: 70rem; */
+    /* margin: 0 auto; */
+    /* background-color: #8490ff; */
+    /* margin-top: 4rem; */
+    transition: all 0.7s linear;
+  }
+
+  .section-contact .grid{
+    gap: 2rem;
+  }
+  
+  .section-contact-main form{
+    gap: 1.7rem;
+    margin: 2rem 15rem;
+    display: flex;
+    flex-direction: column;    
+  }
+
+  .section-contact-main input[type = "text"],
+  .section-contact-main input[type = "email"], 
+  .section-contact-main textarea{
+    width: 100%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--helper);
+  }
+  .section-contact-main textarea{
+    height: 15rem;
+    resize: vertical;
+    border: 2px solid var(--helper);
+  }
+
+  /* .section-contact-main input, .section-contact-main textarea{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border-color: #ced3ff;
+  } */
+
+  .section-contact-main input[type = submit]{
+  
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem; 
+    margin: 0 40%;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ============================================== Footer Section Start =================================================  */
+
+  .f-icons{
+    width: 20px;
+  }
+
+  .section-footer{
+    background-image: var(--gradient);
+    transition: all 0.7s linear;
+    padding-bottom: 1rem;
+  }
+
+  .section-footer h3{
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .f-about p{
+    color: #0a0a1b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    word-break: keep-all;
+  }
+
+  .f-links ul , .f-services ul , .f-contact address{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+
+  .f-links li,
+  .f-links a,
+  .f-services li,
+  .f-services a{
+
+    color:  #0a0a1b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .f-links img, 
+  .f-services img,
+  .f-contact img{
+    margin-right: 0.5rem;
+  }
+
+  .f-contact p,
+  .f-contact a{
+    font-style: normal;
+    font-size: 1rem;
+    color: #0a0a1b;
+    font-weight: 500;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+
+  .section-footer a:hover,
+  .section-footer a:active{
+    color: var(--white);
+  }
+
+  .f-social-icons{
+    margin: 2rem 0;
+    text-align: center;
+    color: #0a0a1b;
+    /* background: var(--icons-bg); */
+    background: transparent;
+  }
+
+  .f-social-icons .f-sicons{
+    width: 3rem;
+    height: 3rem;
+    background: var(--icons-bg);
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    animation: water-wave 3s linear infinite;
+   cursor: pointer;
+  }
+  .f-credits p{
+    color: #0a0a1b;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+/* ============================================== Scrolling Section Start =================================================  */
+
+.scrollTop-style{
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  z-index: 1;
+}
+
+.scroll-top{
+  width: 2.2rem;
+  height: 2.2rem;
+  background-image: var(--gradientSupport);
+  color: var(--white);
+  padding: 5px;
+  border-radius: 53% 47% 45% 55% / 50% 41% 59% 50% ;
+  animation: water-wave 3s linear infinite;
+  cursor: pointer;
+}
+
+/* ============================================== Media Query Section Start ================================================= */
+
+
+ /* 1500px/16 = 93.75em ~ 94em  */
+
+  /* ====================  1500 px ==================== */
+
+@media (max-width : 95em){
+  html{
+    font-family: 88%;
+  }
+  .container{
+    max-width: 120rem;  
+    padding: 0 2.2rem;  
+  }
+  .navbar-list{
+    gap: 2rem;
+  }
+  .navbar .navbar-list .active{
+    color: var(--para);
+  }
+  .hero-image{
+    width: auto;
+    height: auto;
+  }
+  .section-services .grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-services .grid{
+    gap: 3rem;
+  }
+  .common-heading{
+    font-size: 3rem;
+  }
+}
+
+  /* ====================  1200 px ==================== */
+
+@media (max-width: 75em){
+  /* html{
+    font-size: 56.25%;
+  } */
+  
+  .header .logo{
+    width: 12%;
+  }
+  .container{
+    max-width: 100rem;  
+    padding: 0 2.2rem;  
+  }
+  .grid{
+    gap: 2rem;
+  }
+  .header .logo{
+    font-size: 2rem;
+  }
+  .greet{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-transform: none;
+  }
+  .hero-heading{
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .profession{
+    font-size: 1.1rem;
+    word-break:keep-all;
+  }
+  .bio-data .bio-data-info{
+    
+    margin-bottom: 1rem;
+   }
+  .section-services .grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-services .grid{
+    gap: 3rem;
+  }
+  .section-contact-main textarea{
+    width: 100%;
+    height: 15rem;
+    font-size: 0.8rem;
+    resize: vertical;
+  }
+}
+
+
+  /* ====================  1024 px ==================== */
+
+@media (max-width: 64em){
+  html{
+    font-family: 56.25%;
+  }
+  .header .logo{
+    width: 12%;
+  }
+  .container{
+    max-width: 98rem;
+    margin: 0 3rem;
+  }
+  .greet{
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .hero-heading{
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .profession{
+    font-size: 1rem;
+    word-break: keep-all;
+  }
+ .hero-pera{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    /* font-size: 1rem; */
+ }
+ /* .bio-data-stats .bio-stats:first-child{
+  margin-top: 1rem;
+ }  */
+ .bio-data .bio-data-info{
+  margin-bottom: 1rem;
+ }
+ .section-services .grid-three-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-services .grid{
+  gap: 3rem;
+}
+.section-contact-main form{
+  gap: 1.7rem;
+  margin: 2rem 10rem;
+  display: flex;
+  flex-direction: column;    
+}
+}
+
+  /* ====================  980 px ==================== */
+
+@media (max-width: 62em){
+ /* html{
+  font-size: 50%; 
+ } */
+ .header .logo{
+  width: 15%;
+}
+ .common-heading{
+  font-size: 1.9rem;
+ }
+ .scroll-top{
+  width: 2rem;
+  height: 2rem;
+}
+ .greet{
+  font-size: 1.1rem;
+  margin-bottom: 0.1rem;
+}
+.hero-heading{
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  line-height: 2rem;
+}
+.profession{
+  font-size: 1rem;
+  line-height: 1.1rem;
+  word-break: keep-all;
+}
+.profession span{
+  font-size: 1.1rem;
+}
+ p{
+  font-size: 1.1rem;
+  
+ }
+ h3{
+  font-size: 1.1rem;
+ }
+ .header{
+  position: relative;
+ }
+ 
+ .mobile-navbar-btn{
+  display: block;
+  z-index: 9999;
+  border: 1px solid var(--btn);
+  color: var(--btn);
+ }
+ .header .logo{
+  font-size: 1.7rem;
+ }
+
+ .navbar-list{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gradient);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+ }
+ .navbar-list{
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .navbar .navbar-list .navbar-link:link, 
+ .navbar .navbar-list .navbar-link:visited{
+  color: var(--white );
+  font-size: 1.6rem;
+ }
+ .active .navbar-list{
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+ }
+
+ .active .mobile-navbar-btn .ion-icon[name= "menu-outline"]{
+  display: none;
+ }
+
+ .active .mobile-navbar-btn .ion-icon[name= "close-outline"]{
+  display: block;
+ }
+ .bio-data .bio-data-info{
+  margin-bottom: 1rem;
+  line-height: 1.2rem;
+ }
+ 
+ .bio-data-stats .bio-stats:first-child{
+  margin-top: 1rem;
+ } 
+ 
+ /* .bio-data-btn .btn{
+  margin-bottom: 1rem;  
+  text-transform: capitalize;
+  font-size: 0.8rem;
+ } */
+.btn{
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+}
+ /* service section  */
+ .section-services .grid-three-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-services .grid{
+  gap: 2rem;
+}
+.section-services p {
+  font-size: 1.1rem;
+}
+.service-box:hover,
+.service-box:active{
+    /* color: var(--white); */
+    transform: translateY(-2rem);
+    /* border: none;   */
+    /* background-color: var(--helper-bg); */
+}
+/* Project Section  */
+.image-overlay .common-heading{
+    font-size: 1.5rem;
+}
+
+/* Contact Section  */
+.section-contact-main form {
+  gap: 1.2rem;
+  margin: 2rem 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.section-contact-main input[type = "text"],
+.section-contact-main input[type = "email"] 
+{
+  width: 100%;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  border-color: var(--helper);
+}
+
+.section-contact-main textarea{
+  width: 100%;
+  height: 10rem;
+  font-size: 0.8rem;
+  resize: vertical;
+} 
+
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-contact-main input[type = submit]{
+  font-family: 'Poppins', sans-serif;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Footer Section  */
+.grid{
+  gap: 3rem;
+}
+.section-footer .grid-four-column{
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+  /* ====================  790 px ==================== */
+
+@media (max-width : 50em){
+
+  /* .icon-inner{
+    width: 80%;
+  } */
+/* 
+  .header{
+    justify-content: space-around;
+  } */
+
+  .header .logo{
+    width: 15%;
+  }
+  .container{
+    max-width: 71rem;
+    margin: 0 2rem;
+  }
+  .scroll-top{
+    width: 2rem;
+    height: 2rem;
+  }
+  .grid{
+    gap: 1rem;
+  }
+
+  /* Hero Section  */
+  .section-hero .grid-two-column{
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero .section-hero-data{
+    grid-row: 2/3;
+  }
+
+  .section-hero-image{
+    justify-content: center;
+    padding-left: 15px;
+  }
+
+  .section-hero-data{
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+   .section-hero-data .greet{
+     font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+  .section-hero-data .hero-heading{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+  }
+  .profession{
+    font-size: 1.1rem;
+  }
+  
+  .hero-pera{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .section-hero img{
+    width: 50%;
+    /* height: 70%; */
+    display: inline-block;
+    align-items: center;
+    border-radius: 60%;
+    box-shadow: none; 
+  }
+  
+  /* Bio-Data Section  */
+
+  .section-biodata .grid-two-column{
+    grid-template-columns: 1fr;
+  }
+
+  .section-biodata .bio-image{
+    grid-row: 1/2;
+  } 
+
+  .bio-image img{
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .bio-data .bio-data-info {
+    font-size: 1rem;
+  }
+  .bio-data .bio-data-stats{
+    margin-top: -2rem;
+  }
+  .bio-data-stats{
+    gap: 1.5rem;
+  }
+  .bio-progress-bar{
+    width: 80%;
+  }
+  .section-projects .grid-three-column{
+    grid-template-columns: repeat(2,1fr);;
+  }
+  .section-projects p{
+    font-size: 1rem;
+  }
+  .section-projects .grid{
+    gap: 2rem;
+  }
+  /* Service Section  */
+
+  .section-services .grid{
+    gap: 1rem;
+  }
+ 
+
+  .section-services p{
+    font-size: 1rem;
+  }
+  /* contact section  */
+
+  .section-contact-main .grid-two-column{
+    grid-template-columns: 1fr;
+  }
+
+  .section-contact-main .grid{
+    gap: 1.2rem;
+  }
+  .section-contact-main form{
+    gap: 1.2rem;
+    margin: 2rem 10rem;
+    display: flex;
+    flex-direction: column;    
+  }
+  .section-contact-main input[type = "text"],
+  .section-contact-main input[type = "email"] 
+  {
+    width: 100%;
+    height: 2.8rem;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border-color: var(--helper);
+  }
+  .section-contact-main textarea{
+    width: 100%;
+    height: 6rem;
+    font-size: 0.8rem;
+    resize: vertical;
+  } 
+  .submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-contact-main input[type = submit]{
+    padding: 0.6rem 0.6rem;
+    border-radius: 0.5rem; 
+    align-items: center;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /*Footer Section  */
+  .section-footer .grid{
+    gap: 2rem;
+  }
+
+  .section-footer h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .section-footer .f-about p {
+    font-size: 1rem;
+  }
+  
+  .f-links li a{
+    font-size: 1rem;
+  }
+  
+  .f-services li{
+    font-size: 1rem;
+  }
+  
+  .f-contact p, .f-contact a{
+    font-size: 1rem;
+    word-break: break-all;
+  }
+
+  /* Social links  */
+  .f-social-icons .f-sicons{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .f-credits{
+    font-size: 1rem;
+  }
+}
+
+  /* ====================  680 px ==================== */
+@media (max-width: 43em){
+
+  .header .logo{
+    width: 20%;
+  }
+  .container{
+    max-width: 60rem;
+    margin: 0 2rem;
+  }
+  .scroll-top{
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+  /* ===========  Hero Section ============= */
+  .section-hero-image{
+    justify-content: center;
+    padding-left: 15px;
+  }
+  .section-hero img{
+    width: 50%;
+  }
+  .section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    /* padding: 0 2rem; */
+  }
+  .section-hero-data .greet{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  .section-hero .hero-heading{
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+  .section-hero-data .profession{
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+  .profession span{
+    font-size: 1.1rem;
+  }
+  .hero-pera{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .btn{
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+  }
+  /* ===========  BioData Section ========== */
+
+  .bio-image img{
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  .common-heading{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .bio-data .bio-data-info{
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  .bio-data-stats{
+    gap: 1rem;
+  }
+
+  /* ===========  Project Section ========== */
+  .section-projects .grid-three-column {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-projects .grid {
+    gap: 1rem;
+  }
+  .section-projects p{
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-projects .p-btns{
+    width: 35%;
+    gap: 0.5rem;
+  }
+  .p-btns .btn{
+    padding: 0.6rem 0.9rem;
+  }
+  /* ===========  Services Section ========== */
+
+
+.section-services .container{
+  max-width: 60rem;
+}
+.section-services .grid-three-column{
+  grid-template-columns: 1fr 1fr;
+}
+.service-icon{
+  width: 4rem;
+  height: 4rem;
+}
+.service-box h3{
+    margin-top: 1.1rem;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+.section-services p {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.service-box{
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: var(--para);
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.service-box p{
+  font-size: 0.95rem;
+}
+/* ===========  Freelancing Section ========== */
+
+.section-freelancing h2{
+  font-size: 1.6rem;
+}
+
+.section-freelancing h4 {
+  font-size: 1.3rem;
+}
+
+
+  /* ===========  Contact Section ========== */
+  .section-contact-main form {
+    gap: 1.2rem;
+    margin: 2rem 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .section-contact-main input[type = submit] {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem;
+  margin: 0 25%;
+  border-radius: 0.5rem;
+}
+
+/* ===========  Footer Section ========== */
+.section-footer .grid-four-column{
+  grid-template-columns: 1fr 1fr;
+}
+.section-footer .grid {
+  gap: 1.1rem;
+}
+.section-footer .f-about p {
+  font-size: 1rem;
+}
+
+.f-links li a{
+  font-size: 1rem;
+}
+
+.f-services li{
+  font-size: 1rem;
+}
+
+.f-contact p, .f-contact a{
+  font-size: 1remrem;
+  word-break: break-all;
+}
+
+
+}
+
+  /* ====================  590 px ==================== */
+@media (max-width: 37em){
+
+  .header .logo{
+    width: 20%;
+  }
+  .container{
+    max-width: 50rem;
+    margin: 0 1rem;
+  }
+  .scroll-top{
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  /* ===========  Hero Section ============= */
+
+  .section-hero img{
+    width: 50%;
+  }
+  .section-hero-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    /* padding: 0 2rem; */
+  }
+  .section-hero-data .greet{
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .section-hero .hero-heading{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  .section-hero-data .profession{
+    font-size: 0.9rem;
+    
+  }
+  .profession span{
+    font-size: 1.1rem;
+  }
+
+  .hero-pera{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .btn{
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* ===========  BioData Section ========== */
+
+  .bio-image img{
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  .common-heading{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .bio-data .bio-data-info{
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  .bio-data-stats{
+    gap: 0.8rem;
+  }
+  .bio-progress-bar span{
+    font-size: 0.8rem;
+    width: 1.9rem;
+    height: 0.8rem;
+  }
+
+  /* ===========  Project Section ========== */
+
+  .section-projects .grid-three-column {
+    grid-template-columns: 1fr;
+  }
+  .section-projects .grid {
+    gap: 1.5rem;
+  }
+  .section-projects p{
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .section-projects .p-btns{
+    width: 45%;
+    gap: 0.6rem;
+  }
+  .p-btns .btn{
+    padding: 0.5rem 0.7rem;
+  }
+  .projects-images{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-left: 20%;
+      
+    }
+    .image-overlay{
+      width: 90%;
+      height: 8rem;
+    }
+  /* ===========  Services Section ========== */
+
+
+.section-services .container{
+  max-width: 50rem;
+}
+
+.section-services .grid-three-column{
+  grid-template-columns: 1fr;
+}
+.service-icon{
+  width: 4rem;
+  height: 4rem;
+}
+.service-box h3{
+    margin-top: 1.1rem;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+}
+.section-services p {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.services-boxes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service-box{
+    text-align: center;
+    max-width:70%;
+    text-align: center;
+    padding: 1.5rem 4rem;
+    box-shadow: var(--para);
+    border-radius: 5px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.service-box p{
+  font-size: 0.9rem;
+}
+/* ===========  Freelancing Section ========== */
+
+.section-freelancing h2{
+  font-size: 1.5rem;
+}
+
+.section-freelancing h4 {
+  font-size: 1.3rem;
+}
+
+
+  /* ===========  Contact Section ========== */
+  .section-contact-main form {
+    gap: 1.2rem;
+    margin: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.submit-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .section-contact-main input[type = submit] {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+/* ===========  Footer Section ========== */
+
+.section-footer .grid-four-column{
+  grid-template-columns: 1fr;
+}
+.section-footer .grid {
+  gap: 1.1rem;
+}
+.section-footer .f-about p {
+  font-size: 1rem;
+}
+
+.f-links li a{
+  font-size: 1rem;
+}
+
+.f-services li{
+  font-size: 1rem;
+}
+
+.f-contact p, .f-contact a{
+  font-size: 1remrem;
+  word-break: break-all;
+}
+}
+
+
+  /* ====================  480 px ==================== */
+  @media (max-width: 30em){
+
+    .header .logo{
+      width: 25%;
+    }
+
+    
+    .container{
+      max-width: 42rem;
+      margin: 0 1rem;
+    }
+    
+    .header{
+      height: 3rem;
+    }
+    .scroll-top{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    /* ===========  Hero Section ============= */
+  
+    .section-hero-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+      /* padding: 0 2rem; */
+    }
+    .section-hero img{
+      width: 50%;
+    }
+    .section-hero-data .greet{
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .section-hero .hero-heading{
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+    }
+    .section-hero-data .profession{
+      font-size: 0.9rem;
+      text-transform: none;
+    }
+    .section-hero-data .profession span{
+      font-size: 0.9rem;
+      text-transform: none;
+      color: #0a0a1b;
+      font-weight: 800;
+    }
+    .hero-pera{
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .btn{
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+    
+    /* ===========  BioData Section ========== */
+  
+    .bio-image img{
+      width: 60%;
+      margin-bottom: 1rem;
+    }
+    .common-heading{
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .bio-data .bio-data-info{
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    h3{
+      font-size: 0.8rem;
+    }
+    .bio-data-stats{
+      gap: 0.8rem;
+    }
+    .bio-progress-bar span{
+      font-size: 0.6rem;
+      width: 1.5rem;
+      height: 0.8rem;
+    }
+  
+    /* ===========  Project Section ========== */
+  
+    .section-projects .grid-three-column {
+      grid-template-columns: 1fr;
+    }
+    .section-projects .grid {
+      gap: 1.3rem;
+    }
+    .section-projects p{
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+    .project-heading{
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+      position: relative;
+      font-family: 'Poppins', sans-serif;
+      color: var(--white);
+   }
+    .projects-images img{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* padding-left: 20%; */
+    }
+    .image-overlay{
+      height: 8rem;
+    
+    }
+
+    .section-projects .p-btns{
+      width: 35%;
+      gap: 0.5rem;
+    }
+    .p-btns .btn{
+      padding: 0.5rem 0.7rem;
+    }
+ 
+    /* ===========  Services Section ========== */
+  
+  
+  .section-services .container{
+    max-width: 42rem;
+  }
+  
+  .section-services .grid-three-column{
+    grid-template-columns: 1fr;
+  }
+  .service-icon{
+    width: 3rem;
+    height: 3rem;
+  }
+  .service-box h3{
+      margin-top: 1.1rem;
+      margin-bottom: 0.8rem;
+      text-transform: capitalize;
+  }
+  .section-services p {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .service-box{
+      text-align: center;
+      padding: 1.5rem 1.5rem;
+      box-shadow: var(--para);
+      border-radius: 5px;
+      transition: all 0.2s linear;
+      cursor: pointer;
+  }
+  .service-box p{
+    font-size: 0.8rem;
+  }
+  /* ===========  Freelancing Section ========== */
+  
+  .section-freelancing h2{
+    font-size: 1.4rem;
+  }
+  
+  .section-freelancing h4 {
+    font-size: 1rem;
+  }
+  
+  
+    /* ===========  Contact Section ========== */
+  
+    .section-contact-main form {
+      gap: 1.2rem;
+      margin: 2rem 3rem;
+      display: flex;
+      flex-direction: column;
+  }
+  .submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .section-contact-main input[type = submit] {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 0.7rem;
+    /* margin: 0 35%; */
+    border-radius: 0.5rem;
+  }
+  /* ===========  Footer Section ========== */
+  
+  .section-footer .grid-four-column{
+    grid-template-columns: 1fr;
+  }
+  .section-footer .grid {
+    gap: 1.1rem;
+  }
+  /* .section-footer .f-about,.section-footer .f-contact{
+    grid-column: 1/-1;
+  } */
+  .section-footer .f-about p {
+    font-size: 1rem;
+  }
+  
+  .f-links li a{
+    font-size: 1rem;
+  }
+  
+  .f-services li{
+    font-size: 1rem;
+  }
+  
+  .f-contact p, .f-contact a{
+    font-size: 1rem;
+    word-break: break-all;
+  }
+  }
+
+  /* ====================  380 px ==================== */
+
+  @media (max-width: 380px){
+
+
+    .section{
+      margin-top: 1rem;
+    }
+    .header .logo{
+      width: 30%;
+    }
+    .hero-pera{
+      text-align: center;
+    }
+    .section-hero{
+      margin: 3rem 0;
+    }
+    .section-hero-data .profession{
+      font-size: 0.8rem;
+      
+    }
+    .section-hero-data .profession span{
+      font-size: 0.8rem;
+      
+    }
+
+    .service-box{
+      text-align:center;
+      padding: 0.7rem;
+    }
+     .container{
+      max-width: 32rem;
+      margin: 0 1rem;
+    }
+
+   /* ===========  Hero Section ============= */
+
+     /* .section-hero-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0;
+      
+    } */
+    .section-hero img{
+      width: 70%;
+    }
+    /* .section-hero-data .greet{
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    } */
+
+    /* .section-hero .hero-heading{
+      font-size: 1.5rem;
+      line-height: 1.2rem;
+    } */
+    /* .section-hero-data .profession{
+      font-size: 0.8rem;
+      text-transform: none;
+    } */
+    /* .section-hero-data .profession span{
+      font-size: 0.9rem;
+      text-transform: none;
+      color: #0a0a1b;
+      font-weight: 800;
+    } */
+
+  /* .hero-pera{
+      font-size: 0.95rem;
+      text-align: center;
+    } */
+    .btn{
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    /* ===========  BioData Section ========== */
+
+     .bio-image img{
+      width: 60%;
+      margin-bottom: 1rem;
+    }
+
+
+    .section-contact-main input[type = submit]{
+      font-size: 0.9rem;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+  }
+ 
