@@ -3,11 +3,11 @@
 @import '@ionic/vue/css/core.css';
 
 /* Google fonts for Website name  */
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
 
 
 /* -------------------------Universal Styling ------------------- */
@@ -399,6 +399,8 @@ background-color: var(--heading);
 
 .bio-data-info{
     max-height: 8rem;
+    font-weight: 500;
+    /* font-family: work sans; */
     /* margin-bottom: 1rem; */
 }
 .bio-data-stats{
@@ -510,6 +512,7 @@ background-color: var(--heading);
 
 .bio-image img{
     width: 80%;
+    /* height: 100%; */
     /* border-radius: 10%; */
     box-shadow: 0.8rem 0.5rem var(--helper);
     display: inline-block;
@@ -594,6 +597,7 @@ background-color: var(--heading);
 
 .p-btn-active{
     transform: translateY(-0.5rem);
+    
 }
 .p-image-not-active{
     display: none;
@@ -634,8 +638,7 @@ background-color: var(--heading);
 .service-box:active{
     /* color: var(--white); */
     transform: translateY(-2rem);
-    /* border: none;   */
-    /* background-color: var(--helper-bg); */
+    /* background: var(--bg); */
 }
 
 
@@ -1002,6 +1005,9 @@ background-color: var(--heading);
   html{
     font-family: 88%;
   }
+  .header .logo{
+    width: 11%;
+  }
   .container{
     max-width: 120rem;  
     padding: 0 2.2rem;  
@@ -1035,10 +1041,10 @@ background-color: var(--heading);
   } */
   
   .header .logo{
-    width: 12%;
+    width: 13%;
   }
   .container{
-    max-width: 100rem;  
+    max-width: 100rem;    
     padding: 0 2.2rem;  
   }
   .grid{
@@ -1086,7 +1092,7 @@ background-color: var(--heading);
     font-family: 56.25%;
   }
   .header .logo{
-    width: 12%;
+    width: 15%;
   }
   .container{
     max-width: 98rem;
@@ -1136,7 +1142,7 @@ background-color: var(--heading);
   font-size: 50%; 
  } */
  .header .logo{
-  width: 15%;
+  width: 16%;
 }
  .common-heading{
   font-size: 1.9rem;
@@ -1185,7 +1191,7 @@ background-color: var(--heading);
 
  .navbar-list{
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -1326,7 +1332,7 @@ background-color: var(--heading);
   } */
 
   .header .logo{
-    width: 15%;
+    width: 20%;
   }
   .container{
     max-width: 71rem;
@@ -1384,7 +1390,7 @@ background-color: var(--heading);
     /* height: 70%; */
     display: inline-block;
     align-items: center;
-    border-radius: 60%;
+    border-radius: 50%;
     box-shadow: none; 
   }
   
@@ -1520,6 +1526,7 @@ background-color: var(--heading);
 
   .header .logo{
     width: 20%;
+    
   }
   .container{
     max-width: 60rem;
@@ -1703,7 +1710,8 @@ background-color: var(--heading);
 @media (max-width: 37em){
 
   .header .logo{
-    width: 20%;
+    width: 25%;
+    height: 60%;
   }
   .container{
     max-width: 50rem;
@@ -1913,6 +1921,7 @@ background-color: var(--heading);
 
     .header .logo{
       width: 25%;
+      height: 60%;
     }
 
     
@@ -1939,7 +1948,7 @@ background-color: var(--heading);
       /* padding: 0 2rem; */
     }
     .section-hero img{
-      width: 50%;
+      width: 60%;
     }
     .section-hero-data .greet{
       font-size: 1rem;
@@ -1979,7 +1988,7 @@ background-color: var(--heading);
       margin-bottom: 1rem;
     }
     .bio-data .bio-data-info{
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin-bottom: 0.8rem;
     }
     h3{
@@ -2138,13 +2147,14 @@ background-color: var(--heading);
       margin-top: 1rem;
     }
     .header .logo{
+      height: 55%;
       width: 30%;
     }
     .hero-pera{
       text-align: center;
     }
     .section-hero{
-      margin: 3rem 0;
+      margin: 2rem 0;
     }
     .section-hero-data .profession{
       font-size: 0.8rem;
@@ -2208,6 +2218,13 @@ background-color: var(--heading);
 
     /* ===========  BioData Section ========== */
 
+    .bio-stats h3{
+      font-size: 1rem;
+    }
+    .bio-data .bio-data-info{
+      font-size: 1rem;
+    }
+  
      .bio-image img{
       width: 60%;
       margin-bottom: 1rem;
@@ -2220,5 +2237,11 @@ background-color: var(--heading);
       border-radius: 0.5rem;
     }
 
+    /* ================= Project Secction ================== */
+    .section-projects .grid-three-column {
+      grid-template-columns: 1fr;
+      margin: 0px 2rem;
+      padding: 0px 2rem;
+    }
   }
  
